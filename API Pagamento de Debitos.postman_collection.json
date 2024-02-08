@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "ea5bf435-f2c9-4f87-b578-b33fd44a7603",
+		"name": "API Pagamento de Debitos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32866718"
+	},
+	"item": [
+		{
+			"name": "Pagamento por Boleto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n      \"cpfCnpjPagador\": 12345678901,\r\n      \"metodoPagamento\": \"BOLETO\",\r\n      \"valorPagamento\": 100.50,\r\n      \"status\": \"PENDENTE_DE_PROCESSAMENTO\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v1/api/recebimento-debitos"
+			},
+			"response": []
+		},
+		{
+			"name": "Pagamento por Cartão de Crédito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n      \"cpfCnpjPagador\": 45341234578902,\r\n      \"metodoPagamento\": \"CARTAO_CREDITO\",\r\n      \"numeroCartao\": 1234123412341234,\r\n      \"valorPagamento\": 150.98\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v1/api/recebimento-debitos"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Status para Sucesso",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Todos",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Listar por Parametros",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar por Código",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
